@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MR MONSIF - The Hacker</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            overflow: hidden;
+        }
+        .header {
+            padding: 50px;
+            background: #000;
+        }
+        .name {
+            font-size: 70px;
+            color: #fff;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff0000;
+            animation: pulse 1.5s infinite, slide 3s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-15px); }
+            50% { transform: translateX(15px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin: 40px 0;
+        }
+        .section h2 {
+            font-size: 35px;
+            color: #fff;
+            text-shadow: 0 0 10px #fff;
+            animation: flash 2s infinite;
+        }
+        @keyframes flash {
+            0%, 100% { text-shadow: 0 0 10px #fff; }
+            50% { text-shadow: 0 0 20px #fff, 0 0 30px #ff0000; }
+        }
+        .group-name {
+            font-size: 40px;
+            color: #fff;
+            text-shadow: 0 0 15px #fff;
+            animation: pulse 1s infinite, twist 2s infinite;
+        }
+        @keyframes twist {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(3deg); }
+            50% { transform: rotate(-3deg); }
+            75% { transform: rotate(2deg); }
+            100% { transform: rotate(0deg); }
+        }
+        p {
+            font-size: 18px;
+            color: #fff;
+            line-height: 1.8;
+        }
+        .highlight {
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="name">MR MONSIF</h1>
+        <p>The Moroccan Phantom</p>
+    </div>
+    <div class="content">
+        <div class="section">
+            <h2>About Me</h2>
+            <p>
+                I am <span class="highlight">MR MONSIF</span>, a Moroccan hacker who dances in the shadows of the digital world. One day I’m a red hat, igniting chaos in unbreakable systems; the next, a black hat, vanishing without a trace. I am danger incarnate—a master of exploits, a breaker of codes, a ghost in the machine. Professionalism is my blood, and fear is never an option.
+            </p>
+        </div>
+        <div class="section">
+            <h2><span class="group-name">MCA</span> - The Global Syndicate</h2>
+            <p>
+                <span class="highlight">MCA</span> is my crew—a ruthless alliance of hackers from every corner of the globe. We are the elite: deadly, cunning, unstoppable. From Morocco to the edge of the world, we expose vulnerabilities, crush the weak, and rule the digital underground. Join us if you dare, but be ready to play by our rules.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
