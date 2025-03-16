@@ -7,26 +7,46 @@
         body {
             margin: 0;
             padding: 0;
-            background: #000;
+            background: url('https://media.licdn.com/dms/image/v2/D4E03AQEFLvi2lLWc7Q/profile-displayphoto-shrink_800_800/B4EZS61CotHMAc-/0/1738301255585?e=1747872000&v=beta&t=dXo3O4tAZD_-TZ9xjg8hi_ZwgRW4Zyhj5QeaNhrJFH0') no-repeat center center fixed; /* صورة خلفية مرعبة */
+            background-size: cover;
+            background-color: #000; /* لون احتياطي إذا لم تعمل الصورة */
             color: #fff;
             font-family: 'Courier New', monospace;
             text-align: center;
             overflow: hidden;
+            position: relative;
         }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* طبقة تعتيم سوداء شفافة */
+            z-index: 1;
+        }
+
         .header {
             padding: 50px;
-            background: #000;
+            background: transparent; /* حذف الخلفية السوداء لتظهر الخلفية المرعبة */
+            position: relative;
+            z-index: 2; /* ليكون فوق طبقة التعتيم */
         }
+
         .name {
             font-size: 70px;
             color: #fff;
-            text-shadow: 0 0 10px #fff, 0 0 20px #ff0000;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff0000, 0 0 40px #ff0000; /* تعزيز التأثير الأحمر */
             animation: pulse 1.5s infinite, slide 3s infinite;
         }
+
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.8; }
         }
+
         @keyframes slide {
             0% { transform: translateX(0); }
             25% { transform: translateX(-15px); }
@@ -34,30 +54,38 @@
             75% { transform: translateX(-5px); }
             100% { transform: translateX(0); }
         }
+
         .content {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
+            z-index: 2; /* ليكون فوق طبقة التعتيم */
         }
+
         .section {
             margin: 40px 0;
         }
+
         .section h2 {
             font-size: 35px;
             color: #fff;
             text-shadow: 0 0 10px #fff;
             animation: flash 2s infinite;
         }
+
         @keyframes flash {
             0%, 100% { text-shadow: 0 0 10px #fff; }
             50% { text-shadow: 0 0 20px #fff, 0 0 30px #ff0000; }
         }
+
         .group-name {
             font-size: 40px;
             color: #fff;
-            text-shadow: 0 0 15px #fff;
+            text-shadow: 0 0 15px #fff, 0 0 25px #ff0000; /* تعزيز التأثير الأحمر */
             animation: pulse 1s infinite, twist 2s infinite;
         }
+
         @keyframes twist {
             0% { transform: rotate(0deg); }
             25% { transform: rotate(3deg); }
@@ -65,14 +93,20 @@
             75% { transform: rotate(2deg); }
             100% { transform: rotate(0deg); }
         }
+
         p {
             font-size: 18px;
             color: #fff;
             line-height: 1.8;
+            background: rgba(0, 0, 0, 0.8); /* خلفية شفافة سوداء للنصوص */
+            padding: 10px;
+            border: 1px solid #ff0000; /* إطار أحمر */
         }
+
         .highlight {
             color: #ff0000;
             font-weight: bold;
+            text-shadow: 0 0 5px #ff0000;
         }
     </style>
 </head>
